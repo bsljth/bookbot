@@ -19,7 +19,11 @@ def main():
     words_in_file = text_from_file.split()
 
     print(f"--- Begin report of {file_path} ---")
-    print(f"{num_words(words_in_file)} words found in the document")
-    print(num_chars(words_in_file, alph_dict))
+    print(f"{num_words(words_in_file)} words found in the document\n")
+    
+    char_count_result = num_chars(words_in_file, alph_dict)
+    
+    for key in char_count_result:
+      print(f"The '{key}' character was found {char_count_result[key]} times")
 
 main()
